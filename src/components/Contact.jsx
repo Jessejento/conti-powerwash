@@ -38,6 +38,9 @@ const Contact = () => {
           <p>Email: <a href="mailto:dustin.conti@gmail.com">dustin.conti@gmail.com</a></p>
         </div>
         <form onSubmit={handleSubmit} className="contact-form">
+          <div style={{ color: '#1769aa', background: '#e3f0fc', borderRadius: 6, padding: '0.7rem 1rem', marginBottom: '1rem', textAlign: 'center', fontWeight: 500 }}>
+            Please provide either your email or phone number so we can contact you.
+          </div>
           {error && <div style={{ color: 'red', marginBottom: '1rem', textAlign: 'center' }}>{error}</div>}
           <div className="form-group">
             <label htmlFor="name">Name</label>
