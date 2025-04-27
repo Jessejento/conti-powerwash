@@ -1,0 +1,72 @@
+.hero {
+    width: 100vw;
+    min-height: 60vh;
+    background: linear-gradient(rgba(23, 105, 170, 0.45), rgba(23, 105, 170, 0.45)),
+        url('../images/brick-driveway.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: fadeInUp 1s cubic-bezier(.39, .575, .565, 1) both;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    text-align: center;
+    color: #fff;
+    padding: 4rem 2rem 3rem 2rem;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.hero-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #1769aa 0%, #2196f3 100%);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 12px rgba(23, 105, 170, 0.13);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.hero-btn:hover {
+    background: linear-gradient(90deg, #2196f3 0%, #1769aa 100%);
+    box-shadow: 0 6px 24px rgba(23, 105, 170, 0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 700px) {
+    .hero-title {
+        font-size: 2.1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-overlay {
+        padding: 2.5rem 0.5rem 2rem 0.5rem;
+    }
+}
