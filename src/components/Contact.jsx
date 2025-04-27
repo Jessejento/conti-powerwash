@@ -7,9 +7,16 @@ const Contact = () => {
     phone: '',
     message: ''
   });
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Require at least one of email or phone
+    if (!formData.email && !formData.phone) {
+      setError('Please provide either an email or a phone number.');
+      return;
+    }
+    setError('');
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
   };
@@ -31,6 +38,7 @@ const Contact = () => {
           <p>Email: <a href="mailto:dustin.conti@gmail.com">dustin.conti@gmail.com</a></p>
         </div>
         <form onSubmit={handleSubmit} className="contact-form">
+          {error && <div style={{ color: 'red', marginBottom: '1rem', textAlign: 'center' }}>{error}</div>}
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
@@ -50,7 +58,6 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              required
             />
           </div>
           <div className="form-group">
